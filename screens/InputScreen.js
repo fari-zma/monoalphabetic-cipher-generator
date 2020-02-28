@@ -28,21 +28,14 @@ export default class InputScreen extends React.Component {
     let res = '';
     for(var i=0; i<text.length ; i++) {
       let code = text.charCodeAt(i);
-
-      // check the character for space
-      if(code === 32)
-        res = res.concat(' ');
-
-      // check the character for line break
-      else if(code === 10)
-        res = res.concat('\n');
+      let ch = text.charAt(i);
 
       // for alphabets A-Z | a-z
-      else if( (code >= 65 && code <=90) || (code >= 97 && code <=122) )
-        res = res.concat(alphabets[text.charAt(i)]);
+      if( (code >= 65 && code <=90) || (code >= 97 && code <=122) )
+        res = res.concat(alphabets[ch]);
 
       else 
-        res = res.concat(text.charAt(i));
+        res = res.concat(ch);
     }
     await this.setState({resultText: res}, () => {
       this.props.navigation.navigate('Output', {
