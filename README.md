@@ -1,5 +1,5 @@
 # monoalphabetic-cipher-generator
-This app encrypt or decrypt the text meassage using monoalphabetic ciphers concept.
+This app encrypt or decrypt the text message using monoalphabetic ciphers concept.
 
 Youtube link: https://youtu.be/TxyRnnEJkvU
 
